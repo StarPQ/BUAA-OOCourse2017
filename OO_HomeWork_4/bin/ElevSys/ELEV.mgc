@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="ElevSys.Elevaltor" x="78" y="91">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="ElevSys.ElevStatus"
+            endpointName="Status" kind="Simple"/>
+        <Association destinationClassName="ElevSys.Request"
+            endpointName="mainReq" kind="Simple"/>
+        <Association destinationClassName="ElevSys.RequestQueue"
+            endpointName="queue" kind="Simple"/>
+        <Communication destinationClassName="ElevSys.Request"/>
+        <Communication destinationClassName="ElevSys.RequestQueue"/>
+    </Class>
+    <Class name="ElevSys.ElevatorSys" x="634" y="433">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ElevSys.Request" x="348" y="18">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="ElevSys.SuperScheduler"
+            endpointName="superScheduler" kind="Simple"/>
+        <Communication destinationClassName="ElevSys.SuperScheduler"/>
+    </Class>
+    <Class name="ElevSys.SuperScheduler" x="297" y="238">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ElevSys.ALSscheduler"/>
+        <Association destinationClassName="ElevSys.Elevaltor"
+            endpointName="E1" kind="Simple"/>
+        <Association destinationClassName="ElevSys.Elevaltor"
+            endpointName="E2" kind="Simple"/>
+        <Association destinationClassName="ElevSys.Elevaltor"
+            endpointName="E3" kind="Simple"/>
+        <Association destinationClassName="ElevSys.RequestQueue"
+            endpointName="queue" kind="Simple"/>
+        <Communication destinationClassName="ElevSys.Elevaltor"/>
+        <Communication destinationClassName="ElevSys.Request"/>
+        <Communication destinationClassName="ElevSys.RequestQueue"/>
+    </Class>
+    <Class name="ElevSys.RequestQueue" x="583" y="122">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="ElevSys.Elevaltor"/>
+        <Communication destinationClassName="ElevSys.Request"/>
+    </Class>
+    <Class name="ElevSys.scheduler" x="471" y="373">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ElevSys.ElevStatus" x="113" y="377">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ElevSys.ALSscheduler" x="347" y="371">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ElevSys.scheduler"/>
+    </Class>
+</ClassDiagram>
