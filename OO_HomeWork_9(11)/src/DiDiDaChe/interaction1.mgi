@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="DiDiDaChe.Map" x="31" y="321">
+        <Communication destinationClassName="DiDiDaChe.TaxiGUI"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.guigv" x="405" y="430">
+        <Association destinationClassName="DiDiDaChe.guiInfo"
+            endpointName="m" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.processform" x="547" y="376"/>
+    <CommunicationClass name="DiDiDaChe.superTaxi" x="326" y="51">
+        <Extension destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.Request" x="474" y="47">
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Dst" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Pos" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="Scheduler" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Taxi"
+            endpointName="taxi" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Taxi"
+            endpointName="TarTaxi" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.Taxi" x="418" y="333">
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="scheduler" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Position" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="lastP" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.brush" x="418" y="485"/>
+    <CommunicationClass name="DiDiDaChe.JackMa" x="229" y="249">
+        <Association destinationClassName="DiDiDaChe.Light"
+            endpointName="light" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Taxi"
+            endpointName="taxi" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.TaxiGUI"
+            endpointName="gui" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Map"
+            endpointName="map" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.Map"/>
+        <Communication destinationClassName="DiDiDaChe.Light"/>
+        <Communication destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.TaxiGUI"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.InputHandler" x="518" y="141">
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="MaYun" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.trafficLight" x="18" y="12">
+        <Association destinationClassName="DiDiDaChe.Light"
+            endpointName="L" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.debugform" x="522" y="327"/>
+    <CommunicationClass name="DiDiDaChe.Light" x="65" y="71">
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="MaYun" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.trafficLight"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.myform" x="340" y="485"/>
+    <CommunicationClass name="DiDiDaChe.node" x="271" y="486"/>
+    <CommunicationClass name="DiDiDaChe.DrawBoard" x="506" y="422">
+        <Communication destinationClassName="DiDiDaChe.brush"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.guitaxi" x="501" y="271"/>
+    <CommunicationClass name="DiDiDaChe.DiDiDaCheSys" x="170" y="26">
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.TaxiGUI" x="213" y="435">
+        <Communication destinationClassName="DiDiDaChe.guigv"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+        <Communication destinationClassName="DiDiDaChe.gv"/>
+        <Communication destinationClassName="DiDiDaChe.guiInfo"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.myPoint" x="71" y="211">
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Parent" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="DiDiDaChe.gv" x="318" y="374"/>
+    <CommunicationClass name="DiDiDaChe.guiInfo" x="113" y="483"/>
+</ClassDiagram>

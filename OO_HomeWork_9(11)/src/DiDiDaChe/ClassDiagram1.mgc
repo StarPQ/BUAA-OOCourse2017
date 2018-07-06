@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="DiDiDaChe.Map" x="130" y="564">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="DiDiDaChe.TaxiGUI"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </Class>
+    <Class name="DiDiDaChe.guigv" x="180" y="11">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.guiInfo"
+            endpointName="m" kind="Simple"/>
+    </Class>
+    <Class name="DiDiDaChe.processform" x="43" y="229">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.superTaxi" x="1170" y="732">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </Class>
+    <Class name="DiDiDaChe.Request" x="916" y="-1">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Dst" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Pos" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="Scheduler" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Taxi"
+            endpointName="taxi" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Taxi"
+            endpointName="TarTaxi" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </Class>
+    <Class name="DiDiDaChe.Taxi" x="1138" y="230">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="scheduler" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Position" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="lastP" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </Class>
+    <Class name="DiDiDaChe.brush" x="32" y="358">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.JackMa" x="493" y="134">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.Light"
+            endpointName="light" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Taxi"
+            endpointName="taxi" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.TaxiGUI"
+            endpointName="gui" kind="Simple"/>
+        <Association destinationClassName="DiDiDaChe.Map"
+            endpointName="map" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.Map"/>
+        <Communication destinationClassName="DiDiDaChe.Light"/>
+        <Communication destinationClassName="DiDiDaChe.Taxi"/>
+        <Communication destinationClassName="DiDiDaChe.TaxiGUI"/>
+    </Class>
+    <Class name="DiDiDaChe.InputHandler" x="482" y="14">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="MaYun" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+    </Class>
+    <Class name="DiDiDaChe.trafficLight" x="506" y="814">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.Light"
+            endpointName="L" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </Class>
+    <Class name="DiDiDaChe.debugform" x="50" y="303">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.Light" x="506" y="638">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.JackMa"
+            endpointName="MaYun" kind="Simple"/>
+        <Communication destinationClassName="DiDiDaChe.trafficLight"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+    </Class>
+    <Class name="DiDiDaChe.myform" x="142" y="401">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.node" x="153" y="328">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.DrawBoard" x="78" y="360">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="DiDiDaChe.brush"/>
+    </Class>
+    <Class name="DiDiDaChe.guitaxi" x="70" y="400">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.DiDiDaCheSys" x="337" y="1">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="DiDiDaChe.JackMa"/>
+    </Class>
+    <Class name="DiDiDaChe.TaxiGUI" x="221" y="185">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="DiDiDaChe.guigv"/>
+        <Communication destinationClassName="DiDiDaChe.myPoint"/>
+        <Communication destinationClassName="DiDiDaChe.gv"/>
+        <Communication destinationClassName="DiDiDaChe.guiInfo"/>
+    </Class>
+    <Class name="DiDiDaChe.myPoint" x="852" y="566">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="DiDiDaChe.myPoint"
+            endpointName="Parent" kind="Simple"/>
+    </Class>
+    <Class name="DiDiDaChe.gv" x="31" y="401">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DiDiDaChe.guiInfo" x="39" y="75">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
